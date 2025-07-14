@@ -39,6 +39,59 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       margin: auto;        /* Center the card */
     }
+    /* new card  */
+
+    .card {
+      max-width: 60em;
+      max-height: 10em;
+      flex-direction: row;
+      background-color: #696969;
+      border: 0;
+      box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
+      margin: 3em auto;
+    }
+    .card.dark {
+      color: #fff;
+    }
+    .card.card.bg-light-subtle .card-title {
+      color: dimgrey;
+    }
+
+    .card img {
+      max-width: 10%;
+      max-height: 25%;
+      margin: auto;
+      padding: 0.5em;
+      border-radius: 0.7em;
+    }
+    .card-body {
+      display: flex;
+      justify-content: space-between;
+    }
+    .text-section {
+      max-width: 80%;
+    }
+    .cta-section {
+      max-width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    .cta-section .btn {
+      padding: 0.3em 0.5em;
+      /* color: #696969; */
+    }
+    .card.bg-light-subtle .cta-section .btn {
+      background-color: #898989;
+      border-color: #898989;
+    }
+    @media screen and (max-width: 475px) {
+      .card {
+        font-size: 0.9em;
+      }
+    }
+
   </style>
   
 
@@ -86,11 +139,26 @@
       </nav>
 
       <div class="social-links text-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.credly.com/users/deep-rudra" target="_blank">
+         <i class="bi bi-award"></i>
+        </a>
+
+        <a href="https://www.facebook.com/share/1B9p5B3Mmw/" class="facebook" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-facebook"></i>
+        </a>
+
+        <a href="https://www.instagram.com/deep_rudra_/" class="instagram" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="https://github.com/Deeprudra04" class="github" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/deeprudra04/" class="linkedin" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-linkedin"></i>
+      </a>
+
       </div>
 
     </div>
@@ -237,7 +305,7 @@
                 </div>
                 <div class="detail-row">
                   <div class="detail-item">
-                    <span class="detail-label">Experience Level</span>
+                    <span class="detail-label">Working as</span>
                     <span class="detail-value">Student | Project Intern</span>
                   </div>
                   <div class="detail-item">
@@ -252,9 +320,9 @@
                   <i class="bi bi-download"></i>
                   Download Resume
                 </a>
-                <a href="#" class="btn btn-outline">
+                <!-- <a href="#" class="btn btn-outline">
                   <i class="bi bi-chat-dots"></i>
-                  Let's Talk
+                  Let's Talk -->
                 </a>
               </div>
             </div>
@@ -264,52 +332,44 @@
       </div>
 
     </section><!-- /About Section -->
-
+    
     <!-- Stats Section -->
     <section id="stats" class="stats section light-background">
+        <div class="container text-center my-2" data-aos="fade-up">
+         <h2 class="mb-1 mt-1">Experiences</h2>
+        </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="stats-wrapper">
-              <div class="stats-item" data-aos="zoom-in" data-aos-delay="150">
-                <div class="icon-wrapper">
-                  <i class="bi bi-emoji-smile"></i>
-                </div>
-                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Happy Clients</p>
-              </div><!-- End Stats Item -->
-
-              <div class="stats-item" data-aos="zoom-in" data-aos-delay="200">
-                <div class="icon-wrapper">
-                  <i class="bi bi-journal-richtext"></i>
-                </div>
-                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Projects</p>
-              </div><!-- End Stats Item -->
-
-              <div class="stats-item" data-aos="zoom-in" data-aos-delay="250">
-                <div class="icon-wrapper">
-                  <i class="bi bi-headset"></i>
-                </div>
-                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hours Of Support</p>
-              </div><!-- End Stats Item -->
-
-              <div class="stats-item" data-aos="zoom-in" data-aos-delay="300">
-                <div class="icon-wrapper">
-                  <i class="bi bi-people"></i>
-                </div>
-                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hard Workers</p>
-              </div><!-- End Stats Item -->
+        <div class="container">
+          <div class="card bg-dark mt-4">
+            <img src="assets\img\portfolio\kgec_rs_dark_480px.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="text-section">
+                <h5 class="card-title fw-bold text-white">KGEC Robotics Society<h6 style="color: #7f8a94; font-style: italic;">Nadia, West Bengal</h6></h5>
+                <p class="card-text text-white">Actively involved in drone and Mars Rover projects, conducting IoT workshops and mentoring junior interns through hands-on technical training.</p>
+              </div>
+              <div class="cta-section">
+                <div class="text-white">Member, Former-Intern</div>
+                <a href="#" class="btn btn-light">See Projects</a>
+              </div>
             </div>
           </div>
+
+          <div class="card dark">
+            <img src="assets\img\portfolio\adaovi.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="text-section">
+                <h5 class="card-title" style="color: #ff9494;">Adaovi technology</h5><h6 style="color: #1e2124; font-style: italic;">(Online) Bangalore, Karnataka</h6>
+                <p class="card-text">Completed a hands-on course covering ML, DL, NLP, and big data using TensorFlow, Scikit-learn, and Pandas. Built real-world projects including survival prediction, salary regression, lung cancer detection (CNN).</p>
+              </div>
+              <div class="cta-section">
+                <div>January- March, 2024</div>
+                <a href="#" class="btn btn-light">See Projects</a>
+              </div>
+            </div>
         </div>
-
       </div>
-
     </section><!-- /Stats Section -->
 
     <!-- Skills Section -->
