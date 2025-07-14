@@ -91,6 +91,24 @@
         font-size: 0.9em;
       }
     }
+    .resume-btn {
+      background-color: #22c55e; /* VS Code green */
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
+    }
+
+    .resume-btn:hover {
+      background-color: #16a34a; /* Darker green on hover */
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(22, 163, 74, 0.4);
+      text-decoration: none;
+    }
+
 
 
   </style>
@@ -116,9 +134,9 @@
           <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
           <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
           <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-          <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-          <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-          <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Projects</a></li>
+          <!-- <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li> -->
+          <!-- <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -134,7 +152,7 @@
               <li><a href="#">Dropdown 3</a></li>
               <li><a href="#">Dropdown 4</a></li>
             </ul>
-          </li>
+          </li> -->
           <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
         </ul>
       </nav>
@@ -251,13 +269,14 @@
                     <i class="bi bi-envelope"></i>
                     deeprudradr@gmail.com
                   </a>
-                  <a href="tel:+917063740034" class="contact-item">
-                    <i class="bi bi-telephone"></i>
-                    +91-7063740034
-                  </a>
+
                   <a href="#" class="contact-item">
                     <i class="bi bi-geo-alt"></i>
                     Kharagpur, West Bengal
+                  </a>
+                  <a href="#contact" class="contact-item">
+                    <i class="bi bi-chat-dots"></i>
+                    Contact Now
                   </a>
                 </div>
               </div>
@@ -317,7 +336,7 @@
               </div>
 
               <div class="cta-section">
-                <a href="https://drive.google.com/file/d/1qn0IsQWEvrL13AWAAVeGmZTxReno_gjQ/view?usp=sharing" class="btn btn-primary">
+                <a href="assets\Document\DEEP_RUDRA_Resume_2025.pdf" class="btn btn-primary">
                   <i class="bi bi-download"></i>
                   Download Resume
                 </a>
@@ -519,158 +538,235 @@
     </section><!-- /Skills Section -->
 
     <!-- Resume Section -->
-    <section id="resume" class="resume section">
+<section id="resume" class="resume section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Resume</h2>
+    <p>Passionate and detail-oriented engineering student with strong foundations in embedded systems, robotics, VLSI design, and AI/ML. Experienced in project-based learning, team mentoring, and real-world innovation through national-level competitions and internships.</p>
+  </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4">
-          <!-- Left column with summary and contact -->
-          <div class="col-lg-4">
-            <div class="resume-side" data-aos="fade-right" data-aos-delay="100">
-              <div class="profile-img mb-4">
-                <img src="assets/img/profile/profile-square-2.webp" alt="Profile" class="img-fluid rounded">
-              </div>
-
-              <h3>Professional Summary</h3>
-              <p>Driven software architect with expertise in developing scalable, high-performance enterprise solutions. Passionate about leveraging cutting-edge technologies to solve complex business challenges.</p>
-
-              <h3 class="mt-4">Contact Information</h3>
-              <ul class="contact-info list-unstyled">
-                <li><i class="bi bi-geo-alt"></i> 742 Evergreen Terrace, Springfield, MA 02101</li>
-                <li><i class="bi bi-envelope"></i> contact@example.com</li>
-                <li><i class="bi bi-phone"></i> +1 (555) 123-4567</li>
-                <li><i class="bi bi-linkedin"></i> linkedin.com/in/example</li>
-              </ul>
-
-              <div class="skills-animation mt-4">
-                <h3>Technical Skills</h3>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between">
-                    <span>Web Development</span>
-                    <span>95%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between">
-                    <span>UI/UX Design</span>
-                    <span>85%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between">
-                    <span>Cloud Architecture</span>
-                    <span>90%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between">
-                    <span>Project Management</span>
-                    <span>80%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div class="row gy-4">
+      <!-- Left column with summary and contact -->
+      <div class="col-lg-4">
+        <div class="resume-side" data-aos="fade-right" data-aos-delay="100">
+          <div class="profile-img mb-4">
+            <img src="assets\img\profile\profile-square-3.jpg" alt="Profile" class="img-fluid rounded">
           </div>
 
-          <!-- Right column with experience and education -->
-          <div class="col-lg-8 ps-4 ps-lg-5">
-            <!-- Experience Section -->
-            <div class="resume-section" data-aos="fade-up">
-              <h3><i class="bi bi-briefcase me-2"></i>Professional Experience</h3>
+          <h3 class="mt-4 mb-3 text-uppercase" style="font-weight: 480;">Professional Summary</h3>
+          <p><span style="text-align: justify; display: block;">student specializing in Electronics and Communication with hands-on experience in robotics, embedded systems, and AI/ML. Proficient in mentoring peers, leading technical projects, and delivering workshops on emerging technologies.</span></p>
 
-              <div class="resume-item">
-                <h4>Senior Software Architect</h4>
-                <h5>2022 - Present</h5>
-                <p class="company"><i class="bi bi-building"></i> Tech Innovations Inc.</p>
-                <ul>
-                  <li>Lead the architectural design and implementation of enterprise-scale applications</li>
-                  <li>Mentor team of 12 developers and establish technical best practices</li>
-                  <li>Drive adoption of microservices architecture and cloud-native solutions</li>
-                  <li>Reduce system downtime by 75% through improved architecture and monitoring</li>
-                </ul>
+          <h3 class="mt-4 mb-3 text-uppercase" style="font-weight: 600;">Contact Information</h3>
+          <ul class="contact-info list-unstyled">
+            <li><i class="bi bi-geo-alt"></i> Kharagpur, West Bengal</li>
+            <li><i class="bi bi-envelope"></i> deeprudradr@gmail.com</li>
+            <li><i class="bi bi-linkedin"></i> linkedin.com/in/deeprudra04</li>
+            <li><i class="bi bi-github"></i> github.com/Deeprudra04</li>
+            
+          </ul>
+
+          <div class="skills-animation mt-4">
+            <h3 class="mt-4 mb-3 text-uppercase" style="font-weight: 600;">Technical Skills</h3>
+            <div class="skill-item">
+              <div class="d-flex justify-content-between">
+                <span>Embedded Systems</span>
+                <span>90%</span>
               </div>
-
-              <div class="resume-item">
-                <h4>Lead Developer</h4>
-                <h5>2019 - 2022</h5>
-                <p class="company"><i class="bi bi-building"></i> Digital Solutions Corp.</p>
-                <ul>
-                  <li>Spearheaded development of company's flagship product reaching 1M+ users</li>
-                  <li>Implemented CI/CD pipeline reducing deployment time by 60%</li>
-                  <li>Managed team of 8 developers across multiple projects</li>
-                  <li>Increased code test coverage from 45% to 90%</li>
-                </ul>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
-            <!-- Education Section -->
-            <div class="resume-section" data-aos="fade-up" data-aos-delay="100">
-              <h3><i class="bi bi-mortarboard me-2"></i>Education</h3>
-
-              <div class="resume-item">
-                <h4>Master of Science in Computer Science</h4>
-                <h5>2017 - 2019</h5>
-                <p class="company"><i class="bi bi-building"></i> Stanford University</p>
-                <p>Specialized in Artificial Intelligence and Machine Learning. Graduated with honors.</p>
+            <div class="skill-item">
+              <div class="d-flex justify-content-between">
+                <span>Verilog & FPGA</span>
+                <span>85%</span>
               </div>
-
-              <div class="resume-item">
-                <h4>Bachelor of Science in Software Engineering</h4>
-                <h5>2013 - 2017</h5>
-                <p class="company"><i class="bi bi-building"></i> MIT</p>
-                <p>Dean's List all semesters. Led university's coding club.</p>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
-            <!-- Certifications Section -->
-            <div class="resume-section" data-aos="fade-up" data-aos-delay="200">
-              <h3><i class="bi bi-award me-2"></i>Certifications</h3>
-
-              <div class="resume-item">
-                <h4>AWS Certified Solutions Architect - Professional</h4>
-                <h5>2023</h5>
+            <div class="skill-item">
+              <div class="d-flex justify-content-between">
+                <span>AI/ML & CV</span>
+                <span>80%</span>
               </div>
-
-              <div class="resume-item">
-                <h4>Google Cloud Professional Architect</h4>
-                <h5>2022</h5>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
+
+            <div class="skill-item">
+              <div class="d-flex justify-content-between">
+                <span>Python & C</span>
+                <span>90%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <h3 class="mt-4 mb-3 text-uppercase" style="font-weight: 600;">Languages</h3>
+            <ul class="list-unstyled">
+              <li>English – Professional Proficiency</li>
+              <li>Hindi – Native</li>
+              <li>Bengali – Fluent</li>
+            </ul>
+            <h4 class="mt-4 mb-3 text-uppercase" style="font-weight: 600;">Hobbies & Interests</h4>
+            <ul class="list-unstyled">
+              <li>&bull; Drone Programming & Flight Testing</li>
+              <li>&bull; DIY Electronics & Soldering</li>
+              <li>&bull; Exploring AI in Robotics</li>
+              <li>&bull; Tech Blogging & Poster Designing</li>
+              <li>&bull; Watching Tech Explainer Videos</li>
+            </ul>
+
+
+
+          <h3 class="mt-4 mb-3 text-uppercase" style="font-weight: 600;">Tools & Platforms</h3>
+          <ul class="list-unstyled ps-2">
+
+            <li class="mb-1">
+              <i class="bi bi-cpu-fill text-primary me-2"></i> Arduino IDE, ESP IDF, MATLAB
+            </li>
+            <li class="mb-1">
+              <i class="bi bi-hdd-network-fill text-success me-2"></i> Raspberry Pi 4, Pixhawk, MAVProxy
+            </li>
+            <li class="mb-1">
+              <i class="bi bi-diagram-3-fill text-warning me-2"></i> Xilinx Vivado, Cadence Virtuoso
+            </li>
+            <li class="mb-1">
+              <i class="bi bi-robot text-danger me-2"></i> ROS2, Mission Planner, Gazebo
+            </li>
+            <li class="mb-1">
+              <i class="bi bi-tools text-info me-2"></i> KiCad, Proteus, Tinkercad, Wokwi
+            </li>
+            <li class="mb-1">
+              <i class="bi bi-braces text-secondary me-2"></i>VS Code, Git & GitHub, Linux (Bash)
+            </li>
+
+            <li class="mb-1">
+              <i class="bi bi-windows text-primary me-2"></i> Microsoft Office, Adobe Photoshop & Illustrator
+            </li>
+          </ul>
+
+
+          <div class="mt-4 text-center">
+            <a href="assets\Document\DEEP_RUDRA_Resume_2025.pdf" class="btn resume-btn" download>
+              <i class="bi bi-download me-2"></i> Download Resume
+            </a>
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column with experience and education -->
+      <div class="col-lg-8 ps-4 ps-lg-5">
+        <!-- Experience Section -->
+        <div class="resume-section" data-aos="fade-up">
+          <h3><i class="bi bi-briefcase me-2"></i>Professional Experience</h3>
+
+          <div class="resume-item">
+            <h4>Domain Lead – KGEC Robotics Society</h4>
+            <h5>July 2025 – Present</h5>
+            <p class="company"><i class="bi bi-building"></i> <span style="text-decoration: underline;">KGEC Robotics Society</span> <span style="color: #526354;font-style: italic;">Nadia, West Bengal</span></p>
+            <ul>
+              <li>Promoted from Member to Domain Lead; currently overseeing multi-disciplinary robotics projects.</li>
+              <li>Leading junior teams in drone and Rover based research and embedded applications.</li>
+              <li>Mentored junior interns on embedded systems, robotics fundamentals, and project documentation.</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h4>Member (Former Intern)</h4>
+            <h5>July 2024 – July 2025</h5>
+            <p class="company"><i class="bi bi-building"></i> <span style="text-decoration: underline;">KGEC Robotics Society</span><span style="color: #526354;font-style: italic;">Nadia, West Bengal</span></p>
+            <ul>
+              <li>Worked on IRoC-U 2025 project: Autonomous drone for Mars-like terrain (Pixhawk, MAVProxy, RPi 4).</li>
+              <li>Maintained 2m ±5cm flight stability using PID and ultrasonic sensor feedback.</li>
+              <li>Organized and led multiple workshops on Electronics and IoT for college-level students.</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h4>Intern</h4>
+            <h5>Mar – July 2024</h5>
+            <p class="company"><i class="bi bi-building"></i> <span style="text-decoration: underline;">KGEC Robotics Society</span> <span style="color: #526354;font-style: italic;">Nadia, West Bengal</span></p>
+            <ul>
+              <li>Developed a Bluetooth-controlled car using Arduino UNO, HC-05, and Android UART communication.</li>
+              <li>Developed a virtual air-drawing application using Python, OpenCV, NumPy, and a GUI.</li>
+              <li>Implemented color segmentation, contour detection, and fingertip tracking to draw on screen without touch.</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h4>Intern – ADAOVI Technology</h4>
+            <h5>Jan 2024 – Mar 2024</h5>
+            <p class="company"><i class="bi bi-building"></i> ADAOVI Technology (Remote)<span style="color: #526354;font-style: italic;"> Bangalore, Karnataka</span></p>
+            <ul>
+              <li>Completed hands-on training in ML, DL, and Big Data with TensorFlow and Scikit-learn.</li>
+              <li>Built real-world projects including lung cancer detection, survival prediction, and salary regression.</li>
+            </ul>
           </div>
         </div>
 
-      </div>
+        <!-- Education Section -->
+        <div class="resume-section" data-aos="fade-up" data-aos-delay="100">
+          <h3><i class="bi bi-mortarboard me-2"></i>Education</h3>
 
-    </section><!-- /Resume Section -->
+          <div class="resume-item">
+            <h4>B.Tech in Electronics and Communication Engineering</h4>
+            <h5>2023 – Present</h5>
+            <p class="company"><i class="bi bi-building"></i> Kalyani Government Engineering College</p>
+            <p>Current CGPA: 7.96</p>
+          </div>
+
+          <div class="resume-item">
+            <h4>Higher Secondary (Class XII) – WBCHSE</h4>
+            <h5>2022</h5>
+            <p>Marks: 94.8%</p>
+          </div>
+
+          <div class="resume-item">
+            <h4>Madhyamik (Class X) – WBBSE</h4>
+            <h5>2020</h5>
+            <p>Marks: 88.43%</p>
+          </div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div class="resume-section" data-aos="fade-up" data-aos-delay="200">
+          <h3><i class="bi bi-award me-2"></i>Certifications</h3>
+
+          <div class="resume-item">
+            <h4>Quantum Computing Fundamentals – CDAC & IIT Roorkee</h4>
+            <h5>May 2025</h5>
+          </div>
+
+          <div class="resume-item">
+            <h4>IBM SkillsBuild Summer Certification – PBL Program</h4>
+            <h5>July 2025</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Resume Section -->
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <h2 class="mt-4 mb-3 text-uppercase" style="font-weight: 600;">Projects</h2>
+        <p>Here’s a glimpse into some of the technical projects I’ve worked on — blending creativity with engineering. From autonomous drones and AI-powered applications to digital systems designed using VLSI techniques, each project reflects hands-on problem solving and a passion for innovation.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -682,10 +778,10 @@
               <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
                 <ul class="portfolio-filters isotope-filters">
                   <li data-filter="*" class="filter-active">All Projects</li>
-                  <li data-filter=".filter-photography">Photography</li>
-                  <li data-filter=".filter-design">Design</li>
-                  <li data-filter=".filter-automotive">Automotive</li>
-                  <li data-filter=".filter-nature">Nature</li>
+                  <li data-filter=".filter-photography">Electronics and IoT</li>
+                  <li data-filter=".filter-design">Chip Designing / VLSI</li>
+                  <li data-filter=".filter-automotive">Robotics and Drones</li>
+                  <li data-filter=".filter-nature">OpenCV and AI/ML</li>
                 </ul>
               </div>
             </div>
@@ -798,291 +894,13 @@
       </div>
 
     </section><!-- /Portfolio Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="service-header">
-          <div class="row align-items-center">
-            <div class="col-lg-8 col-md-12">
-              <div class="service-intro">
-                <h2 class="service-heading">
-                  <div>Innovative business</div>
-                  <div><span>performance solutions</span></div>
-                </h2>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-              <div class="service-summary">
-                <p>
-                  We integrate forward-thinking strategies, creative approaches, and state-of-the-art technologies to deliver exceptional customer experiences that drive growth and engage target markets.
-                </p>
-                <a href="services.html" class="service-btn">
-                  View All Services
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-palette"></i>
-              </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Creative <span>branding</span>
-                </a>
-              </h3>
-              <p>
-                Nulla facilisi. Maecenas eget magna neque. Suspendisse potenti. Curabitur eleifend nisi non magna vulputate, vel condimentum libero tempus. Proin consectetur feugiat diam.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-gem"></i>
-              </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Design <span>systems</span>
-                </a>
-              </h3>
-              <p>
-                Praesent euismod varius tellus, vel bibendum nunc interdum at. Donec vehicula diam vel metus venenatis convallis. Aliquam erat volutpat. Etiam viverra magna sit amet.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-megaphone"></i>
-              </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Marketing <span>strategies</span>
-                </a>
-              </h3>
-              <p>
-                Vivamus tempor velit id magna dictum, sed fermentum nisi faucibus. Integer nec pretium sapien. Fusce tincidunt ligula et purus consequat, ac pellentesque nulla eleifend.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-code-slash"></i>
-              </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Digital <span>platforms</span>
-                </a>
-              </h3>
-              <p>
-                Cras fermentum odio eu feugiat malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et accumsan cursus. Morbi placerat nulla vel nunc viverra accumsan.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-graph-up"></i>
-              </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Growth <span>acceleration</span>
-                </a>
-              </h3>
-              <p>
-                Aenean vel augue vel nisi bibendum posuere. Phasellus in lacus quis urna sodales dignissim. Duis aliquam libero eget risus facilisis. Quisque eget libero vel nisl fringilla.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-camera-video"></i>
-              </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="service-details.html">
-                  Media <span>solutions</span>
-                </a>
-              </h3>
-              <p>
-                Etiam efficitur lacus in diam finibus, nec ultrices est sagittis. Maecenas elementum magna sed risus faucibus, nec commodo purus facilisis. Vestibulum accumsan magna.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="testimonial-masonry">
-
-          <div class="testimonial-item" data-aos="fade-up">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Implementing innovative strategies has revolutionized our approach to market challenges and competitive positioning.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-f-7.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Rachel Bennett</h3>
-                  <span class="position">Strategy Director</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item highlight" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Exceptional service delivery and innovative solutions have transformed our business operations, leading to remarkable growth and enhanced customer satisfaction across all touchpoints.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-m-7.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Daniel Morgan</h3>
-                  <span class="position">Chief Innovation Officer</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Strategic partnership has enabled seamless digital transformation and operational excellence.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-f-8.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Emma Thompson</h3>
-                  <span class="position">Digital Lead</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Professional expertise and dedication have significantly improved our project delivery timelines and quality metrics.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-m-8.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Christopher Lee</h3>
-                  <span class="position">Technical Director</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item highlight" data-aos="fade-up" data-aos-delay="400">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Collaborative approach and industry expertise have revolutionized our product development cycle, resulting in faster time-to-market and increased customer engagement levels.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-f-9.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Olivia Carter</h3>
-                  <span class="position">Product Manager</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="500">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Innovative approach to user experience design has significantly enhanced our platform's engagement metrics and customer retention rates.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-m-13.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Nathan Brooks</h3>
-                  <span class="position">UX Director</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
     <!-- Contact Section -->
     <section id="contact" class="contact section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2 class="mt-4 mb-3 text-uppercase" style="font-weight: 600;">Contact</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -1091,7 +909,7 @@
           <div class="col-lg-5">
             <div class="info-box">
               <h3>Contact Info</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <p>Feel free to reach out for collaboration, project opportunities, or just to connect and talk tech!</p>
 
               <div class="info-item">
                 <div class="icon-box">
@@ -1099,12 +917,12 @@
                 </div>
                 <div class="content">
                   <h4>Our Location</h4>
-                  <p>A108 Adam Street</p>
-                  <p>New York, NY 535022</p>
+                  <p>Currently at:</p>
+                  <p>Kalyani, Nadia</p>
                 </div>
               </div>
 
-              <div class="info-item">
+              <!-- <div class="info-item">
                 <div class="icon-box">
                   <i class="bi bi-telephone"></i>
                 </div>
@@ -1113,7 +931,7 @@
                   <p>+1 5589 55488 55</p>
                   <p>+1 6678 254445 41</p>
                 </div>
-              </div>
+              </div> -->
 
               <div class="info-item">
                 <div class="icon-box">
@@ -1121,8 +939,8 @@
                 </div>
                 <div class="content">
                   <h4>Email Address</h4>
-                  <p>info@example.com</p>
-                  <p>contact@example.com</p>
+                  <p>deeprudradr@gmail.com</p>
+                  <!-- <p>contact@example.com</p> -->
                 </div>
               </div>
             </div>
@@ -1131,7 +949,7 @@
           <div class="col-lg-7">
             <div class="contact-form">
               <h3>Get In Touch</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <!-- <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p> -->
 
               <form action="forms/contact.php" method="post" class="php-email-form">
                 <div class="row gy-4">
@@ -1185,7 +1003,7 @@
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed with help of  <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
 
