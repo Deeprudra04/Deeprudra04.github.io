@@ -109,6 +109,102 @@
       text-decoration: none;
     }
 
+    /* GitHub Activity Section Styles */
+    .github-activity {
+      background: var(--dark-background);
+      padding: 80px 0;
+    }
+
+    .github-calendar-wrapper {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .calendar-header h3 {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .github-contribution-graph {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .github-contribution-graph img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .github-contribution-graph img:hover {
+      transform: scale(1.02);
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 10px 0;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .stat-card i {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .stat-card h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .stat-card p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .github-cta .btn {
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      font-weight: 600;
+      padding: 12px 30px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .github-cta .btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .github-calendar-wrapper {
+        padding: 20px;
+      }
+      
+      .stat-card {
+        padding: 15px;
+      }
+      
+      .stat-card i {
+        font-size: 2rem;
+      }
+    }
+
 
 
   </style>
@@ -133,8 +229,10 @@
         <ul>
           <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
           <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <!-- <li><a href="#github-activity"><i class="bi bi-github navicon"></i> GitHub Activity</a></li> -->
           <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
           <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Projects</a></li>
+
           <!-- <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li> -->
           <!-- <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -536,6 +634,82 @@
           </div>
       </div>
     </section><!-- /Skills Section -->
+
+    <!-- GitHub Activity Section -->
+    <section id="github-activity" class="github-activity section light-background">
+      
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="text-center text-white fst-italic mb-2 mt-2">GitHub Activity</h2>
+        <p class="text-center text-white fst-italic mb-2 mt-2">My coding journey and contributions over time.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="github-calendar-wrapper">
+              <div class="calendar-header">
+                <h3 class="text-center text-white mb-4">
+                  <i class="bi bi-github me-2"></i>
+                  Contribution Graph
+                </h3>
+                <p class="text-center text-white-50 mb-4">
+                  Track my coding activity and project contributions on GitHub
+                </p>
+              </div>
+              
+              <div class="calendar-container">
+                <!-- GitHub Contribution Graph -->
+                <div class="github-contribution-graph">
+                  <img src="https://ghchart.rshah.org/Deeprudra04" alt="Deep Rudra's GitHub Contributions" class="img-fluid rounded shadow-lg">
+                </div>
+                
+                <div class="github-stats mt-4">
+                  <div class="row text-center">
+                    <div class="col-md-3 col-6 mb-3">
+                      <div class="stat-card">
+                        <i class="bi bi-code-slash text-primary"></i>
+                        <h4 class="text-white">Projects</h4>
+                        <p class="text-white-50">Active Development</p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-3">
+                      <div class="stat-card">
+                        <i class="bi bi-git text-success"></i>
+                        <h4 class="text-white">Commits</h4>
+                        <p class="text-white-50">Regular Updates</p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-3">
+                      <div class="stat-card">
+                        <i class="bi bi-star text-warning"></i>
+                        <h4 class="text-white">Stars</h4>
+                        <p class="text-white-50">Project Recognition</p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-3">
+                      <div class="stat-card">
+                        <i class="bi bi-people text-info"></i>
+                        <h4 class="text-white">Collaboration</h4>
+                        <p class="text-white-50">Team Projects</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="github-cta text-center mt-4">
+                  <a href="https://github.com/Deeprudra04" target="_blank" class="btn btn-outline-light btn-lg">
+                    <i class="bi bi-github me-2"></i>
+                    Visit My GitHub Profile
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section><!-- /GitHub Activity Section -->
 
     <!-- Resume Section -->
 <section id="resume" class="resume section">
