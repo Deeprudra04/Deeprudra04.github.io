@@ -191,6 +191,87 @@
       transform: translateY(-2px);
     }
 
+    /* Visitor Counter Highlight Styles */
+    .visitor-counter-highlight {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 15px 0;
+      box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .visitor-counter-highlight::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .visitor-counter-highlight:hover::before {
+      left: 100%;
+    }
+
+    .visitor-counter-highlight:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+    }
+
+    .visitor-counter-highlight .icon-box {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      backdrop-filter: blur(10px);
+    }
+
+    .visitor-counter-highlight .icon-box i {
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .visitor-counter-highlight h4 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .visitor-counter-highlight p {
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .visitor-counter-highlight #visitor-count {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #ffd700;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .visitor-counter-highlight .content {
+      text-align: center;
+    }
+
     @media (max-width: 768px) {
       .github-calendar-wrapper {
         padding: 20px;
@@ -202,6 +283,20 @@
       
       .stat-card i {
         font-size: 2rem;
+      }
+
+      .visitor-counter-highlight {
+        padding: 15px;
+        margin: 10px 0;
+      }
+
+      .visitor-counter-highlight .icon-box {
+        width: 50px;
+        height: 50px;
+      }
+
+      .visitor-counter-highlight .icon-box i {
+        font-size: 1.2rem;
       }
     }
 
@@ -1117,6 +1212,16 @@
                   <!-- <p>contact@example.com</p> -->
                 </div>
               </div>
+
+              <div class="info-item visitor-counter-highlight">
+                <div class="icon-box">
+                  <i class="bi bi-eye"></i>
+                </div>
+                <div class="content">
+                  <h4>Website Visitors</h4>
+                  <p>You are visitor no.: <span id="visitor-count">0</span></p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -1177,6 +1282,36 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Visitor Counter Script -->
+  <script>
+    // Visitor counter functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get the visitor count element
+      const visitorCountElement = document.getElementById('visitor-count');
+      
+      // Get current count from localStorage or start at 0
+      let currentCount = localStorage.getItem('visitorCount') || 0;
+      
+      // Increment the count
+      currentCount = parseInt(currentCount) + 1;
+      
+      // Save the new count to localStorage
+      localStorage.setItem('visitorCount', currentCount);
+      
+      // Update the display
+      visitorCountElement.textContent = currentCount;
+      
+      // Add a subtle animation effect
+      visitorCountElement.style.transition = 'all 0.3s ease';
+      visitorCountElement.style.color = '#22c55e';
+      
+      // Reset color after animation
+      setTimeout(() => {
+        visitorCountElement.style.color = '';
+      }, 1000);
+    });
+  </script>
 
 </body>
 
