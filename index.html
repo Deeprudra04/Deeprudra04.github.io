@@ -1285,31 +1285,89 @@
 
   <!-- Visitor Counter Script -->
   <script>
-    // Visitor counter functionality
+    // Global visitor counter functionality
     document.addEventListener('DOMContentLoaded', function() {
-      // Get the visitor count element
       const visitorCountElement = document.getElementById('visitor-count');
       
-      // Get current count from localStorage or start at 0
-      let currentCount = localStorage.getItem('visitorCount') || 0;
+      // Function to update visitor count using server-side tracking
+      async function updateVisitorCount() {
+        try {
+          // Check if this is a new session (not just a page refresh)
+          const sessionId = sessionStorage.getItem('sessionId');
+          if (!sessionId) {
+            // This is a new session
+            sessionStorage.setItem('sessionId', Date.now().toString());
+            
+            // Try to increment the count on the server
+            try {
+              const response = await fetch('visitor-counter.php', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                }
+              });
+              
+              if (response.ok) {
+                const data = await response.json();
+                if (data.success) {
+                  visitorCountElement.textContent = data.count;
+                  
+                  // Add animation effect
+                  visitorCountElement.style.transition = 'all 0.3s ease';
+                  visitorCountElement.style.color = '#22c55e';
+                  
+                  setTimeout(() => {
+                    visitorCountElement.style.color = '';
+                  }, 1000);
+                  
+                  return; // Success, exit the function
+                }
+              }
+            } catch (error) {
+              console.log('Server counter failed, using local fallback');
+            }
+            
+            // Fallback to local storage if server fails
+            let localCount = localStorage.getItem('localVisitorCount') || 0;
+            localCount = parseInt(localCount) + 1;
+            localStorage.setItem('localVisitorCount', localCount);
+            visitorCountElement.textContent = localCount + ' (Local)';
+            
+          } else {
+            // This is a page refresh, try to get the current count from server
+            try {
+              const response = await fetch('visitor-counter.php', {
+                method: 'GET'
+              });
+              
+              if (response.ok) {
+                const data = await response.json();
+                if (data.success) {
+                  visitorCountElement.textContent = data.count;
+                  return;
+                }
+              }
+            } catch (error) {
+              console.log('Failed to get server count, using local');
+            }
+            
+            // Fallback to local storage
+            const localCount = localStorage.getItem('localVisitorCount') || 0;
+            visitorCountElement.textContent = localCount + ' (Local)';
+          }
+          
+        } catch (error) {
+          console.log('Visitor counter error:', error);
+          // Final fallback
+          let fallbackCount = sessionStorage.getItem('sessionVisitorCount') || 0;
+          fallbackCount = parseInt(fallbackCount) + 1;
+          sessionStorage.setItem('sessionVisitorCount', fallbackCount);
+          visitorCountElement.textContent = fallbackCount + ' (Session)';
+        }
+      }
       
-      // Increment the count
-      currentCount = parseInt(currentCount) + 1;
-      
-      // Save the new count to localStorage
-      localStorage.setItem('visitorCount', currentCount);
-      
-      // Update the display
-      visitorCountElement.textContent = currentCount;
-      
-      // Add a subtle animation effect
-      visitorCountElement.style.transition = 'all 0.3s ease';
-      visitorCountElement.style.color = '#22c55e';
-      
-      // Reset color after animation
-      setTimeout(() => {
-        visitorCountElement.style.color = '';
-      }, 1000);
+      // Call the function
+      updateVisitorCount();
     });
   </script>
 
